@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Page</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакты - Seovillage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+
+  <style id="sections-styles">
+    
+/* CSS for section section:header */
+.site-header {
+    background-color: var(--color-bg-dark);
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-link {
+    flex-shrink: 0;
+  }
+
+  .logo-wrapper {
+    position: relative;
+    width: 175px;
+    height: 34px;
+  }
+
+  .main-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .main-nav a {
+    font-family: var(--font-family-main);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    color: var(--color-text-on-dark);
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 8px;
+  }
+
+  .main-nav li.active a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-text-on-dark);
+  }
+
+  .header-controls {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .lang-switcher {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--color-text-on-dark);
+    border-radius: 100px;
+    background-color: transparent;
+    color: var(--color-text-on-dark);
+    font-family: var(--font-family-main);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    cursor: pointer;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .menu-toggle-line {
+    width: 37px;
+    height: 1px;
+    background-color: var(--color-text-on-dark);
+    display: block;
+  }
+
+  @media (max-width: 1024px) {
+    .main-nav {
+      display: none; /* Hide nav on tablets, to be handled by JS */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header-container {
+      gap: 20px;
+    }
+    .logo-wrapper {
+        width: 140px;
+        transform: scale(0.8);
+        transform-origin: left;
+    }
+  }
+
+/* CSS for section section:contacts */
+.contacts-page .container {
+    padding-top: 80px;
+    padding-bottom: 120px;
+  }
+
+  .contacts-hero {
+    margin-bottom: 20px;
+  }
+
+  .breadcrumbs ol {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--color-text-muted);
+  }
+
+  .breadcrumbs .separator {
+    width: 3px;
+    height: 3px;
+    background-color: var(--color-text-muted);
+    border-radius: 50%;
+  }
+
+  .contacts-title {
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 60px;
+    letter-spacing: -0.5px;
+    margin: 20px 0 0;
+    margin-bottom: 40px;
+    color: var(--color-text-dark);
+  }
+
+  .contact-card {
+    background-color: var(--color-bg-white);
+    border-radius: 15px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .address-block {
+    background-color: var(--color-bg-light);
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  .address-block h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+
+  .address-block p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--color-text-muted);
+  }
+
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 0 15px;
+    flex-wrap: wrap;
+  }
+
+  .info-items {
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+  }
+
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .info-label {
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--color-text-muted);
+  }
+
+  .info-value {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 26px;
+    color: var(--color-text-dark);
+  }
+
+  .map-buttons {
+    display: flex;
+    border: 1px solid rgba(30, 28, 27, 0.2);
+    border-radius: 100px;
+    padding: 5px;
+    gap: 4px;
+  }
+
+  .map-btn {
+    padding: 12px 32px;
+    border-radius: 100px;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+ 
+
+  .map-btn.active {
+    background-color: #1e1c1b;
+    color: var(--color-text-on-dark);
+  }
+
+  .map-btn:not(.active) {
+    background-color: transparent;
+    color: var(--color-text-muted);
+  }
+
+   .map-btn:hover {
+    background-color: transparent;
+    color: #1e1c1b;
+  }
+ 
+  
+
+
+  .map-placeholder {
+    background-color: var(--color-bg-white);
+    width: 100%;
+    height: 660px;
+  }
+
+  .other-contacts-grid {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .contact-item {
+    background-color: var(--color-bg-white);
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact-item-header {
+    background-color: var(--color-bg-light);
+    border-radius: 10px;
+    padding: 14px 15px 49px;
+  }
+  
+  .contact-item-header h3 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    margin: 0;
+  }
+
+  .contact-item-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 15px 25px;
+  }
+
+  @media (max-width: 1024px) {
+    .other-contacts-grid {
+      grid-template-columns: 1fr;
+    }
+    .info-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contacts-title {
+      font-size: 40px;
+      line-height: 44px;
+    }
+    .info-items {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+    }
+    .info-row {
+      gap: 32px ;
+    }
+    .map-placeholder {
+          height: 40px;
+    }
+
+
+  .contact-card {
+    background-color: var(--color-bg-white);
+    border-radius: 15px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .info-row {
+        gap: 24px;
+    }
+
+.contact-item-header {
+    background-color: var(--color-bg-light);
+    border-radius: 10px;
+    padding: 14px 15px;
+}
+.contact-item {
+    gap: 20px;
+  }
+
+  .contact-item-body {
+    gap: 4px;
+    padding: 0 10px 20px;
+}
+  }
+
+
+  </style>
+  <script src="global.js" defer></script>
+</head>
+<body>
+<header id="section-header" class="site-header">
+  <div class="container header-container">
+    <a href="#" class="logo-link">
+      <!--merged image-->
+      <div class="logo-wrapper">
+        <img src="images/23_149.svg" alt="Seovillage logo part" style="position: absolute; left: 57.38px; top: 16.30px; width: 17.02px; height: 16.83px;">
+        <img src="images/23_151.svg" alt="Seovillage logo part" style="position: absolute; left: 144.83px; top: 16.13px; width: 15.32px; height: 16.88px;">
+        <img src="images/23_153.svg" alt="Seovillage logo part" style="position: absolute; left: 27.77px; top: 16.35px; width: 12.92px; height: 16.72px;">
+        <img src="images/23_155.svg" alt="Seovillage logo part" style="position: absolute; left: 75.58px; top: 16.45px; width: 15.95px; height: 16.55px;">
+        <img src="images/23_157.svg" alt="Seovillage logo part" style="position: absolute; left: 127.30px; top: 16.35px; width: 16.23px; height: 16.65px;">
+        <img src="images/23_164.svg" alt="Seovillage logo part" style="position: absolute; left: 94.00px; top: 16.50px; width: 3.80px; height: 16.40px;">
+        <img src="images/23_166.svg" alt="Seovillage logo part" style="position: absolute; left: 101.45px; top: 16.43px; width: 11.10px; height: 16.47px;">
+        <img src="images/23_168.svg" alt="Seovillage logo part" style="position: absolute; left: 114.50px; top: 16.53px; width: 11.32px; height: 16.50px;">
+        <img src="images/23_170.svg" alt="Seovillage logo part" style="position: absolute; left: 43.55px; top: 16.58px; width: 12.13px; height: 16.40px;">
+        <img src="images/23_172.svg" alt="Seovillage logo part" style="position: absolute; left: 163.10px; top: 16.63px; width: 11.95px; height: 16.35px;">
+        <img src="images/23_174.svg" alt="Seovillage logo part" style="position: absolute; left: 0.00px; top: 0.08px; width: 46.60px; height: 33.85px;">
+      </div>
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li class="active"><a href="#">Главная</a></li>
+        <li><a href="#">Ресторан</a></li>
+        <li><a href="#">СПА</a></li>
+        <li><a href="#">Тренажерный зал</a></li>
+        <li><a href="#">Активности</a></li>
+        <li><a href="#">О нас</a></li>
+      </ul>
+    </nav>
+    <div class="header-controls">
+      <button class="lang-switcher">EN</button>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+      </button>
+    </div>
+  </div>
+</header>
+<main id="section-contacts" class="contacts-page">
+  <div class="container">
+    <div class="contacts-hero">
+      <nav aria-label="breadcrumb" class="breadcrumbs">
+        <ol>
+          <li><a href="#">Главная</a></li>
+          <li>/</li>
+          <li>Контакты</li>
+        </ol>
+      </nav>
+      <h1 class="contacts-title">Контакты</h1>
+    </div>
+
+    <div class="contact-card">
+      <div class="address-block">
+        <h3>Адрес</h3>
+        <p>Ķebakas, Ķeipenes pagasts, Ogres novads, LV-5062, Latvia</p>
+      </div>
+      <div class="info-row">
+        <div class="info-items">
+          <div class="info-item">
+            <span class="info-label">Время работы</span>
+            <span class="info-value">06:00 - 24:00</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Phone & WhatsApp</span>
+            <span class="info-value">+375 25 962 21 88</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">E-mail</span>
+            <span class="info-value">book@seovillage.com</span>
+          </div>
+        </div>
+        <div class="map-buttons">
+          <a href="#" class="map-btn active">Google maps</a>
+          <a href="https://www.waze.com/pl/live-map/directions/lv/riga/plauzu-iela?to=place.Ej5QbGF1xb51IGllbGEsIExhdGdhbGVzIHByaWVrxaFwaWxzxJN0YSwgUsSrZ2EsIExWLTEwNzMsIExhdHZpYSIuKiwKFAoSCcsR4c0Hzu5GEcB7LcWRaZexEhQKEgnvHc-6DdLuRhFnnxkRcby1aQ&from=place.w.15794746.158144064.24779728" target="_blank" class="map-btn">Go to Waze</a>
+        </div>
+      </div>
+      <div class="map-placeholder" id="">
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d558004.9195061935!2d24.679234239210007!3d56.88527160420119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e913d855131b1d%3A0xde3bb035d5733b55!2sSeoVillage%20Resort%20%26%20Spa!5e0!3m2!1sru!2sby!4v1757832909245!5m2!1sru!2sby" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- Map container -->
+      </div>
+    </div>
+
+    <div class="other-contacts-grid">
+      <article class="contact-item">
+        <div class="contact-item-header">
+          <h3>Бронирование ресторана</h3>
+        </div>
+        <div class="contact-item-body">
+          <span class="info-label">Телефон</span>
+          <a href="tel:+375259622188" class="info-value">+375 (25) 962 21 88</a>
+        </div>
+      </article>
+      <article class="contact-item">
+        <div class="contact-item-header">
+          <h3>Банный комплекс</h3>
+        </div>
+        <div class="contact-item-body">
+          <span class="info-label">Телефон</span>
+          <a href="tel:+375259622188" class="info-value">+375 (25) 962 21 88</a>
+        </div>
+      </article>
+      <article class="contact-item">
+        <div class="contact-item-header">
+          <h3>Сотрудничество</h3>
+        </div>
+        <div class="contact-item-body">
+          <span class="info-label">Телефон</span>
+          <a href="tel:+375259622188" class="info-value">+375 (25) 962 21 88</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+<section id="section-footer">
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-contact-info">
+          <div class="subtitle-group">
+            <span class="dot"></span>
+            <p class="subtitle-text">Book your stay</p>
+          </div>
+          <p class="description">Cozy cabins near Riga for a peaceful getaway and recharge.Comfort and nature for your perfect escape.</p>
+          <a href="#" class="cta-button">
+            <span>Book your stay</span>
+            <img src="images/footer/40_730.png" alt="Arrow right">
+          </a>
+          <hr class="separator">
+          <div class="contact-details">
+            <a href="tel:+375259622188" class="phone-number">+375 (25) 962 21 88</a>
+            <div class="address">
+              <p class="address-details-2">Ķebakas, Latvia</p>
+              <p class="address-details">(Ķeipenes pagasts, Ogres novads, LV-5062,)</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-video-placeholder">
+              <video autoplay muted loop id="myVideo">
+        <source src="/images/footer/video_footer.mp4" type="video/mp4">
+    </video>
+          <!-- Video or Image Placeholder -->
+        </div>
+      </div>
+
+      <hr class="separator">
+
+      <div class="footer-navigation">
+        <div class="nav-column">
+          <h3 class="nav-title">Navigation</h3>
+          <ul class="nav-list">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Ресторан</a></li>
+            <li><a href="#">СПА</a></li>
+            <li><a href="#">Тренажерный зал</a></li>
+            <li><a href="#">Активности</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="nav-column">
+          <h3 class="nav-title">Legal</h3>
+          <ul class="nav-list">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div class="nav-column nav-socials">
+          <h3 class="nav-title">Socials</h3>
+          <ul class="nav-list">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      
+
+      <div class="footer-bottom">
+        <!--merged image-->
+        <div class="footer-logo">
+          <img src="images/footer/logo-footer.svg" alt="SEOVILLAGE logo part" style="position: absolute; left: 0px;">
+        </div>
+        <p class="copyright">©2022-2025. SIA SEOBROTHERS. All rights reserved. Company Registration Number: 40203205517</p>
+      </div>
+    </div>
+  </footer>
+</section>
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="global.js"></script>
+</body>
+</html>
